@@ -1,0 +1,82 @@
+class Player {
+        -int totalGamesPlayed
+        -int totalWins
+        +startNewGame() DailyGame
+}
+
+class DailyGame {
+
+        -boolean isWonLocally
+        -Language theLanguage
+        -List~Guess~ guessHistory
+        +submitGuess(String languageName) GuessResult
+        +isGameOver() boolean
+
+}
+
+class Language {
+
+        -Difficulty difficulty //informacja dostępna od samego początku gry
+
+        -String name
+        -int releaseYear
+        -Paradigm paradigm
+        -TypingType typing
+        -int popularity //ile uzytkownikow
+        -Level level
+        +getName() String
+        +getReleaseYear() int
+        +getParadigm() Paradigm
+        +getTyping() TypingType
+        +getPopularity int
+        +getLevel() Level
+
+        +getDifficulty() Difficulty
+}
+
+
+class Guess {
+        -String guessName
+}
+
+class GuessResult {
+
+        -int isNameCorrect
+        -int isParadigmCorrect
+        -int isTypingCorrect
+        -int releaseYearCompare
+        -int popularityCompare
+        +isFullyCorrect() boolean
+}
+
+class GuessAnalyzer {
+        +evaluate(Guess guess, Language target, LanguageRepository repo) GuessResult
+    }
+
+    class LanguageRepository {
+        -List~Language~ languages
+        +getLanguageByName(String name) Language
+        +getRandomLanguage() Language
+    }
+
+    class Paradigm {
+        OBJECT_ORIENTED
+        FUNCTIONAL
+        PROCEDURAL
+    }
+
+    class Level {
+        HIGH_LEVEL
+        LOW_LEVEL
+    }
+
+    class TypingType {
+        STATIC
+        DYNAMIC
+    }
+
+    class Difficulty {
+        EASY
+        MEDIUM
+        HARD
+    }

@@ -1,0 +1,93 @@
+classDiagram
+    class Player {
+        -int totalGamesPlayed
+        -int totalWins
+        +startGame() DailyGame
+    }
+
+    class DailyGame {
+        -boolean isWon
+        -Language theLanguage
+        -List~Guess~ guessHistory
+        +submitGuess(String languageName) GuessResult
+        +isGameOver() boolean
+    }
+
+    class Language {
+
+        -Difficulty difficulty %% informacja dostępna od samego początku gry
+
+        -String name
+        -int releaseYearV1 %% v1 - pierwsza wersja
+        -int releaseYearVn %% vn - ostatnia wersja
+        -Paradigm paradigm
+        -TypingType typing
+        -int popularity %% ile uzytkownikow
+        -Level level
+        +getName() String
+        +getReleaseYearV1() int
+        +getReleaseYearVN() int
+        +getParadigm() Paradigm
+        +getTyping() TypingType
+        +getPopularity int
+        +getLevel() Level
+
+        +getDifficulty() Difficulty
+    }
+
+    class Guess {
+        -String guessName
+        -int attemptNumber
+    }
+
+    class GuessResult {
+        -int isNameCorrect
+        -int isParadigmCorrect
+        -int isTypingCorrect
+        -int releaseYearCompareV1
+        -int releaseYearCompareVn
+        -int popularityCompare
+        +isFullyCorrect() boolean
+    }
+
+    class GuessAnalyzer {
+        +evaluate(Guess guess, Language target, LanguageRepository repo) GuessResult
+    }
+
+    class LanguageRepository {
+        -List~Language~ languages
+        +getLanguageByName(String name) Language
+        +getRandomLanguage() Language
+    }
+
+    class Paradigm {
+        OBJECT_ORIENTED
+        FUNCTIONAL
+        PROCEDURAL
+    }
+
+    class Level {
+        HIGH_LEVEL
+        LOW_LEVEL
+    }
+
+    class TypingType {
+        STATIC
+        DYNAMIC
+    }
+
+
+
+    %%Warstwa związków
+
+   
+    Player "one" *-- "0..*" DailyGame : gra
+    DailyGame o-- "1" Language : ma okreslony jezyk 
+    DailyGame *-- "0..*" Guess : posiada ich historie
+    Language --> Paradigm : posiada
+    Language --> TypingType : posiada 
+    Language --> Level : posiada 
+    GuessAnalyzer ..> Guess : analizuje
+    GuessAnalyzer ..> Language : weryfikuje z
+    GuessAnalyzer ..> GuessResult : produkuje
+    LanguageRepository o-- "0..*" Language : posiada

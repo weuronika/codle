@@ -1,0 +1,21 @@
+Name|Paradigm|Typing|Level|First Release|Last Release|Popularity|Hint
+"Python"|"[OOP, PROCEDURAL, FUNCTIONAL]"|"DYNAMIC"|"HIGH_LEVEL"|1991|2024|1|print("Hello, World!")
+"C++"|"[OOP, PROCEDURAL]"|"STATIC"|"HIGH_LEVEL"|1985|2024|2|std::cout << "Hello, World!";
+"Java"|"[OOP, CONCURRENT]"|"STATIC"|"HIGH_LEVEL"|1995|2024|3|System.out.println("Hello, World");
+"C"|"[PROCEDURAL]"|"STATIC"|"LOW_LEVEL"|1972|2024|4|printf("Hello World");
+"C#"|"[OOP, FUNCTIONAL, CONCURRENT]"|"STATIC"|"HIGH_LEVEL"|2000|2024|5|Console.WriteLine("Hello, World!"); 
+"JavaScript"|"[EVENT, FUNCTIONAL, OOP]"|"DYNAMIC"|"HIGH_LEVEL"|1995|2024|6|console.log('Hello, World!');
+"SQL"|"[DECLARATIVE]"|"STATIC"|"HIGH_LEVEL"|1974|2024|7|PRINT 'Hello, World!';
+"Go"|"[CONCURRENT, PROCEDURAL]"|"STATIC"|"HIGH_LEVEL"|2009|2024|8|fmt.Println("Hello, World!")
+"Delphi"|"[OOP, PROCEDURAL]"|"STATIC"|"HIGH_LEVEL"|1995|2024|9|WriteLn('Hello, world!');
+"Visual Basic"|"[OOP, EVENT]"|"STATIC"|"HIGH_LEVEL"|1991|2022|10|Console.WriteLine("Hello, World!")
+"Fortran"|"[PROCEDURAL, CONCURRENT]"|"STATIC"|"HIGH_LEVEL"|1957|2024|11|print *, 'Hello, World!'
+"Scratch"|"[EVENT]"|"DYNAMIC"|"HIGH_LEVEL"|2007|2020|12|🟣 say [Hello, World!] for (2) seconds
+"Rust"|"[CONCURRENT, FUNCTIONAL]"|"STATIC"|"LOW_LEVEL"|2015|2024|13|println!("Hello, World!");
+"PHP"|"[OOP, PROCEDURAL]"|"DYNAMIC"|"HIGH_LEVEL"|1995|2024|14|echo 'Hello, World!';
+"R"|"[FUNCTIONAL, PROCEDURAL]"|"DYNAMIC"|"HIGH_LEVEL"|1993|2024|15|print("Hello, World!")
+"MATLAB"|"[PROCEDURAL, OOP]"|"DYNAMIC"|"HIGH_LEVEL"|1984|2024|16|disp('Hello, World!')
+"Assembly"|"[PROCEDURAL]"|"STATIC"|"LOW_LEVEL"|1949|2024|17|hello db 'Hello, World!', 10
+"COBOL"|"[PROCEDURAL, OOP]"|"STATIC"|"HIGH_LEVEL"|1959|2024|18|DISPLAY 'HELLO WORLD'.
+"Ruby"|"[OOP]"|"DYNAMIC"|"HIGH_LEVEL"|1995|2024|19|puts "Hello, World!"
+"Prolog"|"[LOGIC]"|"DYNAMIC"|"HIGH_LEVEL"|1972|2024|20| write('Hello, World!').
