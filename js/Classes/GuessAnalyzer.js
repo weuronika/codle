@@ -87,11 +87,11 @@ export class GuessAnalyzer {
         }
 
         if (inputLanguage.getFirstRelease() < this.#theLanguage.getFirstRelease()) {
-            firstReleaseRes = -1;
+            firstReleaseRes = 1;
         }
 
         if (inputLanguage.getFirstRelease() > this.#theLanguage.getFirstRelease()) {
-            firstReleaseRes = 1;
+            firstReleaseRes = -1;
         }
 
         // ******** OSTATNIE WYDANIE **********
@@ -101,11 +101,11 @@ export class GuessAnalyzer {
         }
 
         if (inputLanguage.getLastRelease() < this.#theLanguage.getLastRelease()) {
-            lastReleaseRes = -1;
+            lastReleaseRes = 1;
         }
 
         if (inputLanguage.getLastRelease() > this.#theLanguage.getLastRelease()) {
-            lastReleaseRes = 1;
+            lastReleaseRes = -1;
         }
 
         // *** TWORZENIE WYNIKU ***

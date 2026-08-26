@@ -12,6 +12,9 @@ const inputField = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchBtn');
 const resultDisplay = document.getElementById('result');
 
+const welcome = document.getElementById('welcome');
+const startButton = document.getElementById('startBtn');
+
 const modal = document.getElementById('popupVictory');
 const returnButton = document.getElementById('backToHome');
 const restartButton = document.getElementById('restartBtn');
@@ -26,6 +29,9 @@ let isHintShowed = false;
 hintButton.addEventListener("click", addHint);
 
 searchButton.addEventListener("click", performSearch);
+startButton.addEventListener("click", () => {
+  welcome.close();
+});
 
 inputField.addEventListener("keyup", (event) => {
     if (event.key === "Enter") {
@@ -73,6 +79,8 @@ const guessListNames = [];
 
 let firstGuess = false;
 
+welcome.showModal();
+
 function performSearch() {
 
             const query = inputField.value.trim().toLowerCase(); 
@@ -82,8 +90,6 @@ function performSearch() {
             let findQuery = REPO.getLanguageByName(query);
             
             if (findQuery != undefined) {
-
-
 
                 resultDisplay.textContent = "";
 
@@ -123,7 +129,7 @@ function performSearch() {
                 boxesMap.set(levelBox, { res : guessResult.getLvlRes(), text : findQuery.getLevel() });
                 boxesMap.set(firstRelBox, { res : guessResult.getFirstRes(), text : findQuery.getFirstRelease() });
                 boxesMap.set(lastRelBox, { res : guessResult.getLastRes(), text : findQuery.getLastRelease() });
-                boxesMap.set(popularityBox, { res : guessResult.getPopRes(), text : findQuery.getPopularity() });
+                boxesMap.set(popularityBox, { res : guessResult.getPopRes(), text : /*findQuery.getPopularity()*/ '' });
                 boxesMap.set(paradigmBox, { res : guessResult.getParaRes(), text : findQuery.getParadigm() });
 
                 
@@ -171,6 +177,7 @@ function performSearch() {
 
                     column.appendChild(newBox);
                     newRow.appendChild(column);
+
                 });
 
                 firstGuess = true;
