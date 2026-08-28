@@ -17,7 +17,7 @@ export class RepositoryCreator {
 
         const mapForCsv = new Map();
 
-        const response = await fetch('csv/repository.csv');
+        const response = await fetch('./csv/repository.csv');
 
         if (!response.ok) {
             const msg = `An error has occurred while trying to load the "repository.csv" file : ${response.status}`;
