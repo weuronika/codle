@@ -1,8 +1,15 @@
-# codle
-projekt na PO 2026
+# Codle
 
-Jak zagrać?
-Pobierz kod na swój komputer (sklonuj repozytorium lub użyj opcji Code -> Download ZIP i rozpakuj paczkę).
-Otwórz folder z projektem w swoim edytorze kodu (np. VS Code).
-Uruchom plik index.html za pomocą wtyczki Live Server. Powodzenia! :)
+Project for the object-oriented programming subject. 
 
+## How to play?
+
+1. Open the game: [weuronika.github.io/codle](https://weuronika.github.io/codle/)
+2. Click the **Start** button.
+3. Try to guess the programming language!
+   
+## Roadmap (Coming Soon)
+
+- [ ] Implement the "one game a day" rule (currently, you can play as many times as you want!).
+- [ ] Expand the list of available programming languages.
+- [ ] Save player progress and daily streaks using local storage.
